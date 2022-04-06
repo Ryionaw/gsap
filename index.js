@@ -1,4 +1,4 @@
-console.clear();
+// console.clear();
 gsap.registerPlugin(ScrollTrigger);
 const tl = gsap
   .timeline({
@@ -141,8 +141,10 @@ const laptops = {
 
 for (let i = -17; i < frameCount; i++) {
   const img = new Image();
-  img.src = currentFrame(i);
-  images.push(img);
+  if (i >= 0) {
+    img.src = currentFrame(i);
+    images.push(img);
+  }
   // console.log(img.src);
 }
 
@@ -162,7 +164,7 @@ tl.to(laptops, {
 function render() {
   context.clearRect(0, 0, canvas.width, canvas.height);
   context.drawImage(images[laptops.frame], 0, 0);
-  console.clear();
+  // console.clear();
 }
 
 // END LOAD CANVAS ROTATION 1
@@ -189,8 +191,10 @@ const laptops2 = {
 
 for (let i = 0; i < frameCount2; i++) {
   const img = new Image();
-  img.src = currentFrame2(i);
-  images2.push(img);
+  if (i >= 0) {
+    img.src = currentFrame2(i);
+    images2.push(img);
+  }
   // console.log(img.src);
 }
 
@@ -210,7 +214,7 @@ images2[0].onload = render;
 function render2() {
   context2.clearRect(0, 0, canvas2.width, canvas2.height);
   context2.drawImage(images2[laptops2.frame], 0, 0);
-  console.clear();
+  // console.clear();
 }
 
 // END LOAD CANVAS ROTATION 3
@@ -233,8 +237,10 @@ const laptops3 = {
 
 for (let i = -10; i < frameCount3; i++) {
   const img = new Image();
-  img.src = currentFrame3(i);
-  images3.push(img);
+  if (i >= 0) {
+    img.src = currentFrame3(i);
+    images3.push(img);
+  }
   // console.log(img.src);
 }
 
@@ -254,7 +260,7 @@ images3[0].onload = render;
 function render3() {
   context3.clearRect(0, 0, canvas3.width, canvas3.height);
   context3.drawImage(images3[laptops3.frame], 0, 0);
-  console.clear();
+  // console.clear();
 }
 
 // END LOAD CANVAS ROTATION 3
