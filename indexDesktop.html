@@ -28,7 +28,7 @@
     <link rel="stylesheet" href="index.css" />
   </head>
   <body>
-    <div class="container-fluid animate desktop">
+    <div class="container-fluid animate">
       <section class="videoSectionFull">
         <div class="row">
           <div class="col-sm-12 noMargPadd">
@@ -80,68 +80,8 @@
         <p id="eleventhWord">IdeaPad 5i Pro (16”, Gen 7)</p>
       </section>
     </div>
-    <div class="container-fluid mobile">
-      <section class="section1Mob">
-        <div class="row">
-          <div class="col-sm-12 noMargPadd">
-            <div class="laptop-wrapper">
-              <video
-                class="videoPlay"
-                autoplay
-                loop
-                muted
-                src="https://laravel3.isysedge.com/gamepass/assets/video/Forza.mp4"
-              ></video>
-              <canvas id="animation1Mob"></canvas>
-            </div>
-            <h1 id="firstWordMob">NEVER MISS A THING</h1>
-            <p id="secondWordMob">
-              The World’s First 16” WQHD+ with 240hz <br />
-              refresh rates, 100% sRGB color accuracy,<br />
-              and Overdrive Technology.
-            </p>
-            <p id="thirdWordMob">Legion 5i Pro (16”, Gen 7)</p>
-            <h1 id="fourthWordMob">LEGION 5i PRO</h1>
-          </div>
-        </div>
-      </section>
-      <section class="section2Mob">
-        <div class="row">
-          <div class="col-sm-12 noMargPadd">
-            <canvas id="animation2Mob"></canvas>
-            <h1 id="fifthWordMob">
-              PUMP UP <br />
-              THE POWER
-            </h1>
-            <p id="sixthWordMob">
-              The Lenovo exclusive X Power gives you <br />
-              approximately 10% more performance <br />
-              compared to similarly configured machines.
-            </p>
-            <p id="seventhWordMob">Yoga 9i (14”, Gen 7)</p>
-            <h1 id="eightWordMob">YOGA 9i</h1>
-          </div>
-        </div>
-      </section>
-      <section class="section3Mob">
-        <div class="row">
-          <div class="col-sm-12 noMargPadd">
-            <canvas id="animation3Mob"></canvas>
-            <h1 id="ninthWordMob">
-              SHIELD <br />
-              YOUR EYES
-            </h1>
-            <p id="tenthWordMob">
-              Ease the strain on your eyes over long gaming sessions with the
-              TÜV Rheinland eye-safe certification for low blue light.
-            </p>
-            <p id="eleventhWordMob">IdeaPad 5i Pro (16”, Gen 7)</p>
-          </div>
-        </div>
-      </section>
-    </div>
     <div class="container-fluid done">
-      <section class="bottomContent">
+      <section class="section3">
         <div class="section_laptop_slider">
           <div class="container">
             <h3>Select a Lenovo device to complement your style of play.</h3>
@@ -297,32 +237,7 @@
     ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
-
-    <script>
-      if (/Mobi/.test(navigator.userAgent)) {
-        document.write(
-          "<scr" +
-            'ipt type="text/javascript" src="indexMob1.js"></scr' +
-            "ipt>"
-        );
-        document.write(
-          "<scr" +
-            'ipt type="text/javascript" src="indexMob2.js"></scr' +
-            "ipt>"
-        );
-        document.write(
-          "<scr" +
-            'ipt type="text/javascript" src="indexMob3.js"></scr' +
-            "ipt>"
-        );
-        alert("test");
-      } else {
-        document.write(
-          "<scr" + 'ipt type="text/javascript" src="index.js"></scr' + "ipt>"
-        );
-      }
-    </script>
-    <!-- <script src="index.js"></script> -->
+    <script src="index.js"></script>
 
     <script>
       $(document).ready(function () {

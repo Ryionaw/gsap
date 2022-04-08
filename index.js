@@ -20,7 +20,7 @@ const tl = gsap
   })
   //  Make Video Full Large
   .set(".videoSectionFull", {
-    scale: 1.5,
+    scale: 1.8,
     ease: "none",
     yPercent: 5,
   })
@@ -218,9 +218,9 @@ function render2() {
   // console.clear();
 }
 
-// END LOAD CANVAS ROTATION 3
+// END LOAD CANVAS ROTATION 2
 
-// LOAD CANVAS ROTATION 2
+// LOAD CANVAS ROTATION 3
 const canvas3 = document.getElementById("animation3");
 const context3 = canvas3.getContext("2d");
 
