@@ -142,9 +142,9 @@ const laptops = {
 
 for (let i = -35; i < frameCount; i++) {
   // if (i >= 0) {
-    const img = new Image();
-    img.src = currentFrame(i);
-    images.push(img);
+  const img = new Image();
+  img.src = currentFrame(i);
+  images.push(img);
   // }
   // console.log(img.src);
 }
@@ -227,7 +227,7 @@ const context3 = canvas3.getContext("2d");
 canvas3.width = 1440;
 canvas3.height = 1440;
 
-const frameCount3 = 55;
+const frameCount3 = 77;
 const currentFrame3 = (index) =>
   `assets/images/5ipro/${(index + 1).toString()}.png`;
 
@@ -236,7 +236,7 @@ const laptops3 = {
   frame: 0,
 };
 
-for (let i = -10; i < frameCount3; i++) {
+for (let i = 0; i < frameCount3; i++) {
   const img = new Image();
   if (i >= 0) {
     img.src = currentFrame3(i);
