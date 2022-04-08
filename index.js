@@ -1,20 +1,21 @@
 // console.clear();
 gsap.registerPlugin(ScrollTrigger);
+// scroll trigger initiate
 const tl = gsap
   .timeline({
     scrollTrigger: {
       trigger: ".animate",
       scrub: 10,
       start: "top top",
-      end: "bottom center",
+      // end: "bottom center",
       markers: "true",
       pin: true,
-      pinType: "fixed",
+      // pinType: "fixed",
       pinnedContainer: ".animate",
       preventOverlaps: true,
       refreshPriority: 1,
       // endTrigger: ".done",
-      // end: "+=400%",
+      end: "+=400%",
     },
   })
   //  Make Video Full Large
@@ -26,7 +27,7 @@ const tl = gsap
   // Set Animation Gone
   .set("#animation3", { xPercent: 350 })
   .set("#animation2", { xPercent: -350 })
-  .set("#animation1", { opacity: 0 })
+  // .set("#animation1", { opacity: 0 })
   .set("#firstWord", { opacity: 0 })
   .set("#secondWord", { opacity: 0 })
   .set("#thirdWord", { opacity: 0 })
@@ -71,7 +72,7 @@ const tl = gsap
   .to("#firstWord", 1, { ease: "slow", opacity: 0 })
   .to("#fourthWord", 0, { ease: "slow", y: -1050, opacity: 1 })
   .to("#animation1", 1, {
-    duration: 10,
+    duration: 20,
     ease: "slow(0.2, 0.2, false)",
     xPercent: -500,
   })
@@ -123,8 +124,8 @@ const tl = gsap
 const canvas = document.getElementById("animation1");
 const context = canvas.getContext("2d");
 
-canvas.width = 1440;
-canvas.height = 1440;
+canvas.width = 1500;
+canvas.height = 1500;
 
 const frameCount = 52;
 // const currentFrame = (index) =>
@@ -139,19 +140,19 @@ const laptops = {
   frame: 0,
 };
 
-for (let i = -17; i < frameCount; i++) {
-  const img = new Image();
-  if (i >= 0) {
+for (let i = -35; i < frameCount; i++) {
+  // if (i >= 0) {
+    const img = new Image();
     img.src = currentFrame(i);
     images.push(img);
-  }
+  // }
   // console.log(img.src);
 }
 
 tl.to(laptops, {
   frame: frameCount - 1,
   snap: "frame",
-  ease: "none",
+  ease: "slow",
   scrollTrigger: {
     trigger: ".animate",
     scrub: 0.5,

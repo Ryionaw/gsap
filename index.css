@@ -1,21 +1,16 @@
-html,
-body {
+html, body {
   overflow-x: hidden;
 }
-
 .noMargPadd {
   padding: 0;
   margin: 0;
 }
-
 .container-fluid {
   padding: 0;
 }
-
 .animate {
   position: relative;
 }
-
 .animate .videoSectionFull img {
   width: 100%;
   margin: 0 auto;
@@ -23,21 +18,16 @@ body {
   top: 0;
   z-index: 99;
 }
-
 .laptop-wrapper {
   position: relative;
   padding-bottom: 67.5%;
   height: 0;
 }
-
 .laptop-wrapper.second {
   visibility: hidden;
 }
-
 .laptop-wrapper video {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  background: url("assets/images/origin.png") center center no-repeat;
+  box-sizing: border-box;
   background-size: contain;
   padding: 7% 1% 27% 0%;
   position: absolute;
@@ -45,101 +35,81 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
+  z-index: 20;
 }
-
 #animation1 {
   position: fixed;
   left: 25%;
   top: -2%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  -webkit-transform: scale(2.5);
-          transform: scale(2.5);
+  transform: translate(-50%, -50%);
+  transform: scale(2.5);
   width: 800px;
   height: 800px;
+  z-index: 10;
 }
-
 #animation2 {
   position: fixed;
   left: 21%;
   top: 6%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  -webkit-transform: scale(2.5);
-          transform: scale(2.5);
+  transform: translate(-50%, -50%);
+  transform: scale(2.5);
   width: 700px;
   height: 700px;
 }
-
 #animation3 {
   position: fixed;
   left: 21%;
   top: 6%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  -webkit-transform: scale(2.5);
-          transform: scale(2.5);
+  transform: translate(-50%, -50%);
+  transform: scale(2.5);
   width: 700px;
   height: 700px;
 }
-
 .section2 {
   height: 0;
 }
-
 .section2 h1 {
   font-family: "Gotham-Bold";
 }
-
 .section2 p {
   font-family: "Gotham-Medium";
 }
-
 .section2 #fourthWord {
   text-align: center;
   font-size: 6rem;
 }
-
 .section2 #eightWord {
   text-align: center;
   font-size: 6rem;
 }
-
 .section3 .section_laptop_slider {
   padding: 0px 0 40px 0;
 }
-
 .section3 .section_laptop_slider .container {
   max-width: 1080px;
   margin: 0 auto;
 }
-
 .section3 .section_laptop_slider h3 {
   font-family: "Gotham-Medium";
   text-align: center;
   font-size: 28px;
   margin-bottom: 40px;
 }
-
 .section3 .section_laptop_slider .ls_box {
   padding: 0 15px;
 }
-
 .section3 .section_laptop_slider .ls_image img {
   display: block;
   width: 100%;
 }
-
 .section3 .section_laptop_slider .ls_info {
   background: #3e8ddd;
 }
-
 .section3 .section_laptop_slider .ls_info:after {
   content: "";
   display: block;
   clear: both;
 }
-
 .section3 .section_laptop_slider .ls_half {
   width: calc(100% / 2);
   display: block;
@@ -150,7 +120,6 @@ body {
   padding: 10px 0;
   text-decoration: none;
 }
-
 .section3 .section_laptop_slider .ls_half.buy_now {
   line-height: 40px;
   text-align: center;
@@ -158,7 +127,6 @@ body {
   position: relative;
   font-size: 22px;
 }
-
 .section3 .section_laptop_slider .ls_half.buy_now:before {
   content: "";
   display: block;
@@ -169,35 +137,28 @@ body {
   top: 5px;
   left: 0;
 }
-
 .section3 .section_laptop_slider .slick-prev {
   left: -10px;
 }
-
 .section3 .section_laptop_slider .slick-prev:before {
   color: #3e8ddd;
   opacity: 1;
 }
-
 .section3 .section_laptop_slider .slick-next {
   right: -10px;
 }
-
 .section3 .section_laptop_slider .slick-next:before {
   color: #3e8ddd;
   opacity: 1;
 }
-
 .section3 .section_gamepass {
   padding: 40px 0 0;
   background: #000;
 }
-
 .section3 .section_gamepass .container {
   max-width: 1080px;
   margin: 0 auto;
 }
-
 .section3 .section_gamepass h3 {
   font-family: "Gotham-Medium";
   text-align: center;
@@ -205,27 +166,22 @@ body {
   margin-bottom: 40px;
   color: #fff;
 }
-
 .section3 .section_gamepass img {
   width: 100%;
 }
-
 .section3 .section_guide {
-  background: url("assets/images/bg_cover.jpg") no-repeat center/cover;
+  background: url("assets/images/bg_cover.jpg") no-repeat center / cover;
   padding: 40px 0;
 }
-
 .section3 .section_guide .container {
   max-width: 960px;
   margin: 0 auto;
 }
-
 .section3 .section_guide .guide_box {
   background: #107c10;
   border-radius: 20px;
   padding: 20px 40px;
 }
-
 .section3 .section_guide h3 {
   font-family: "Gotham-Medium";
   text-align: center;
@@ -233,124 +189,404 @@ body {
   margin-bottom: 40px;
   color: #fff;
 }
-
 .section3 .section_guide .guide_content {
   border-top: 1px solid #fff;
   padding-top: 40px;
 }
-
 .section3 .section_guide ol {
   padding-left: 20px;
 }
-
 .section3 .section_guide ol li {
   color: #fff;
   font-family: "Gotham-Book";
   font-size: 18px;
   margin-bottom: 20px;
 }
-
 .section3 .section_guide ol li::marker {
   font-family: "Gotham-Medium";
 }
-
 .section3 .section_guide ol li strong {
   font-family: "Gotham-Medium";
 }
-
 .section3 .section_guide ol li .guide_top {
   padding-left: 10px;
   margin-bottom: 20px;
-  background: url("assets/images/arrow_right.png") no-repeat right center/10px;
+  background: url("assets/images/arrow_right.png") no-repeat right center / 10px;
   cursor: pointer;
 }
-
 .section3 .section_guide ol li .guide_top.active {
-  background: url("assets/images/arrow_bottom.png") no-repeat right center/10px;
+  background: url("assets/images/arrow_bottom.png") no-repeat right center / 10px;
 }
-
 .section3 .section_guide ol li .guide_bot {
   display: none;
 }
-
 .section3 .section_guide ol li .guide_bot img {
   width: 90%;
 }
-
 @media only screen and (min-width: 1920px) {
   canvas {
     position: fixed;
     left: 31%;
     top: 22%;
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-    -webkit-transform: scale(3.8);
-            transform: scale(3.8);
+    transform: translate(-50%, -50%);
+    transform: scale(3.8);
     width: 700px;
     height: 700px;
-  }
+ }
 }
-
 @media only screen and (max-width: 1080px) {
   section .section_laptop_slider .container {
     width: 100%;
     padding: 0 20px;
-  }
+ }
   section .section_laptop_slider h3 {
     font-size: 22px;
-  }
+ }
   section .section_laptop_slider .ls_half {
     font-size: 13px;
-  }
+ }
   section .section_laptop_slider .ls_half.buy_now {
     font-size: 16px;
-  }
+ }
   section .section_gamepass .container {
     width: 100%;
     padding: 0 20px;
-  }
+ }
   section .section_gamepass h3 {
     font-size: 22px;
-  }
+ }
   section .section_guide .container {
     padding: 0 40px;
     width: 100%;
-  }
+ }
   section .section_guide h3 {
     font-size: 22px;
-  }
+ }
 }
-
 @media only screen and (max-width: 767px) {
   section .section_laptop_slider h3 {
     font-size: 18px;
     line-height: 28px;
-  }
+ }
   section .section_laptop_slider .ls_half {
     font-size: 13px;
-  }
+ }
   section .section_laptop_slider .ls_half.buy_now {
     font-size: 16px;
-  }
+ }
   section .section_gamepass h3 {
     font-size: 18px;
     line-height: 28px;
-  }
+ }
+  section .section_gamepass h3 html, section .section_gamepass h3 body {
+    overflow-x: hidden;
+ }
+  section .section_gamepass h3 .noMargPadd {
+    padding: 0;
+    margin: 0;
+ }
+  section .section_gamepass h3 .container-fluid {
+    padding: 0;
+ }
+  section .section_gamepass h3 .animate {
+    position: relative;
+ }
+  section .section_gamepass h3 .animate .videoSectionFull img {
+    width: 100%;
+    margin: 0 auto;
+    position: absolute;
+    top: 0;
+    z-index: 99;
+ }
+  section .section_gamepass h3 .laptop-wrapper {
+    position: relative;
+    padding-bottom: 67.5%;
+    height: 0;
+ }
+  section .section_gamepass h3 .laptop-wrapper.second {
+    visibility: hidden;
+ }
+  section .section_gamepass h3 .laptop-wrapper video {
+    box-sizing: border-box;
+    background-size: contain;
+    padding: 7% 1% 27% 0%;
+    position: absolute;
+    top: -10%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+ }
+  section .section_gamepass h3 #animation1 {
+    position: fixed;
+    left: 25%;
+    top: -2%;
+    transform: translate(-50%, -50%);
+    transform: scale(2.5);
+    width: 800px;
+    height: 800px;
+ }
+  section .section_gamepass h3 #animation2 {
+    position: fixed;
+    left: 21%;
+    top: 6%;
+    transform: translate(-50%, -50%);
+    transform: scale(2.5);
+    width: 700px;
+    height: 700px;
+ }
+  section .section_gamepass h3 #animation3 {
+    position: fixed;
+    left: 21%;
+    top: 6%;
+    transform: translate(-50%, -50%);
+    transform: scale(2.5);
+    width: 700px;
+    height: 700px;
+ }
+  section .section_gamepass h3 .section2 {
+    height: 0;
+ }
+  section .section_gamepass h3 .section2 h1 {
+    font-family: "Gotham-Bold";
+ }
+  section .section_gamepass h3 .section2 p {
+    font-family: "Gotham-Medium";
+ }
+  section .section_gamepass h3 .section2 #fourthWord {
+    text-align: center;
+    font-size: 6rem;
+ }
+  section .section_gamepass h3 .section2 #eightWord {
+    text-align: center;
+    font-size: 6rem;
+ }
+  section .section_gamepass h3 .section3 .section_laptop_slider {
+    padding: 0px 0 40px 0;
+ }
+  section .section_gamepass h3 .section3 .section_laptop_slider .container {
+    max-width: 1080px;
+    margin: 0 auto;
+ }
+  section .section_gamepass h3 .section3 .section_laptop_slider h3 {
+    font-family: "Gotham-Medium";
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 40px;
+ }
+  section .section_gamepass h3 .section3 .section_laptop_slider .ls_box {
+    padding: 0 15px;
+ }
+  section .section_gamepass h3 .section3 .section_laptop_slider .ls_image img {
+    display: block;
+    width: 100%;
+ }
+  section .section_gamepass h3 .section3 .section_laptop_slider .ls_info {
+    background: #3e8ddd;
+ }
+  section .section_gamepass h3 .section3 .section_laptop_slider .ls_info:after {
+    content: "";
+    display: block;
+    clear: both;
+ }
+  section .section_gamepass h3 .section3 .section_laptop_slider .ls_half {
+    width: calc(100% / 2);
+    display: block;
+    float: left;
+    font-family: "Gotham-Bold";
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    text-decoration: none;
+ }
+  section .section_gamepass h3 .section3 .section_laptop_slider .ls_half.buy_now {
+    line-height: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    position: relative;
+    font-size: 22px;
+ }
+  section .section_gamepass h3 .section3 .section_laptop_slider .ls_half.buy_now:before {
+    content: "";
+    display: block;
+    width: 2px;
+    height: 50px;
+    background: #fff;
+    position: absolute;
+    top: 5px;
+    left: 0;
+ }
+  section .section_gamepass h3 .section3 .section_laptop_slider .slick-prev {
+    left: -10px;
+ }
+  section .section_gamepass h3 .section3 .section_laptop_slider .slick-prev:before {
+    color: #3e8ddd;
+    opacity: 1;
+ }
+  section .section_gamepass h3 .section3 .section_laptop_slider .slick-next {
+    right: -10px;
+ }
+  section .section_gamepass h3 .section3 .section_laptop_slider .slick-next:before {
+    color: #3e8ddd;
+    opacity: 1;
+ }
+  section .section_gamepass h3 .section3 .section_gamepass {
+    padding: 40px 0 0;
+    background: #000;
+ }
+  section .section_gamepass h3 .section3 .section_gamepass .container {
+    max-width: 1080px;
+    margin: 0 auto;
+ }
+  section .section_gamepass h3 .section3 .section_gamepass h3 {
+    font-family: "Gotham-Medium";
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 40px;
+    color: #fff;
+ }
+  section .section_gamepass h3 .section3 .section_gamepass img {
+    width: 100%;
+ }
+  section .section_gamepass h3 .section3 .section_guide {
+    background: url("assets/images/bg_cover.jpg") no-repeat center / cover;
+    padding: 40px 0;
+ }
+  section .section_gamepass h3 .section3 .section_guide .container {
+    max-width: 960px;
+    margin: 0 auto;
+ }
+  section .section_gamepass h3 .section3 .section_guide .guide_box {
+    background: #107c10;
+    border-radius: 20px;
+    padding: 20px 40px;
+ }
+  section .section_gamepass h3 .section3 .section_guide h3 {
+    font-family: "Gotham-Medium";
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 40px;
+    color: #fff;
+ }
+  section .section_gamepass h3 .section3 .section_guide .guide_content {
+    border-top: 1px solid #fff;
+    padding-top: 40px;
+ }
+  section .section_gamepass h3 .section3 .section_guide ol {
+    padding-left: 20px;
+ }
+  section .section_gamepass h3 .section3 .section_guide ol li {
+    color: #fff;
+    font-family: "Gotham-Book";
+    font-size: 18px;
+    margin-bottom: 20px;
+ }
+  section .section_gamepass h3 .section3 .section_guide ol li::marker {
+    font-family: "Gotham-Medium";
+ }
+  section .section_gamepass h3 .section3 .section_guide ol li strong {
+    font-family: "Gotham-Medium";
+ }
+  section .section_gamepass h3 .section3 .section_guide ol li .guide_top {
+    padding-left: 10px;
+    margin-bottom: 20px;
+    background: url("assets/images/arrow_right.png") no-repeat right center / 10px;
+    cursor: pointer;
+ }
+  section .section_gamepass h3 .section3 .section_guide ol li .guide_top.active {
+    background: url("assets/images/arrow_bottom.png") no-repeat right center / 10px;
+ }
+  section .section_gamepass h3 .section3 .section_guide ol li .guide_bot {
+    display: none;
+ }
+  section .section_gamepass h3 .section3 .section_guide ol li .guide_bot img {
+    width: 90%;
+ }
   section .section_guide .container {
     padding: 0 20px;
-  }
+ }
   section .section_guide h3 {
     font-size: 18px;
     line-height: 28px;
-  }
+ }
   section .section_guide .guide_box {
     padding: 20px;
-  }
+ }
   section .section_guide ol li {
     font-size: 14px;
-  }
+ }
   section .section_guide ol li .guide_top {
     padding-right: 20px;
-  }
+ }
 }
-/*# sourceMappingURL=index.css.map */
+@media only screen and (max-width: 767px) and (min-width: 1920px) {
+  section .section_gamepass h3 canvas {
+    position: fixed;
+    left: 31%;
+    top: 22%;
+    transform: translate(-50%, -50%);
+    transform: scale(3.8);
+    width: 700px;
+    height: 700px;
+ }
+}
+@media only screen and (max-width: 767px) and (max-width: 1080px) {
+  section .section_gamepass h3 section .section_laptop_slider .container {
+    width: 100%;
+    padding: 0 20px;
+ }
+  section .section_gamepass h3 section .section_laptop_slider h3 {
+    font-size: 22px;
+ }
+  section .section_gamepass h3 section .section_laptop_slider .ls_half {
+    font-size: 13px;
+ }
+  section .section_gamepass h3 section .section_laptop_slider .ls_half.buy_now {
+    font-size: 16px;
+ }
+  section .section_gamepass h3 section .section_gamepass .container {
+    width: 100%;
+    padding: 0 20px;
+ }
+  section .section_gamepass h3 section .section_gamepass h3 {
+    font-size: 22px;
+ }
+  section .section_gamepass h3 section .section_guide .container {
+    padding: 0 40px;
+    width: 100%;
+ }
+  section .section_gamepass h3 section .section_guide h3 {
+    font-size: 22px;
+ }
+}
+@media only screen and (max-width: 767px) and (max-width: 767px) {
+  section .section_gamepass h3 section .section_laptop_slider h3 {
+    font-size: 18px;
+    line-height: 28px;
+ }
+  section .section_gamepass h3 section .section_laptop_slider .ls_half {
+    font-size: 13px;
+ }
+  section .section_gamepass h3 section .section_laptop_slider .ls_half.buy_now {
+    font-size: 16px;
+ }
+  section .section_gamepass h3 section .section_gamepass h3 {
+    font-size: 18px;
+    line-height: 28px;
+ }
+  section .section_gamepass h3 section .section_guide .container {
+    padding: 0 20px;
+ }
+  section .section_gamepass h3 section .section_guide h3 {
+    font-size: 18px;
+    line-height: 28px;
+ }
+  section .section_gamepass h3 section .section_guide .guide_box {
+    padding: 20px;
+ }
+  section .section_gamepass h3 section .section_guide ol li {
+    font-size: 14px;
+ }
+  section .section_gamepass h3 section .section_guide ol li .guide_top {
+    padding-right: 20px;
+ }
+}
