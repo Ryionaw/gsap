@@ -300,6 +300,7 @@
 
     <script>
       if (/Mobi/.test(navigator.userAgent)) {
+        $(".desktop").remove();
         document.write(
           "<scr" +
             'ipt type="text/javascript" src="indexMob1.js"></scr' +
@@ -315,17 +316,20 @@
             'ipt type="text/javascript" src="indexMob3.js"></scr' +
             "ipt>"
         );
-        alert("test");
       } else {
+        $(".mobile").remove();
         document.write(
           "<scr" + 'ipt type="text/javascript" src="index.js"></scr' + "ipt>"
         );
       }
     </script>
-    <!-- <script src="index.js"></script> -->
 
     <script>
       $(document).ready(function () {
+        $(window).resize(function () {
+          location.reload();
+        });
+
         $(".ls_wrapper").slick({
           slidesToShow: 3,
           slidesToScroll: 3,

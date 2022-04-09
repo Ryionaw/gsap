@@ -71,7 +71,7 @@ for (let i = 0; i < frameCount2; i++) {
     img.src = currentFrame2(i);
     images2.push(img);
   }
-  // console.log(img.src);
+  console.log(img.src);
 }
 
 tl2.to(laptops2, {
