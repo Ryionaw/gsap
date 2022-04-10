@@ -28,7 +28,7 @@
     <link rel="stylesheet" href="index.css" />
   </head>
   <body>
-    <div class="container-fluid animate desktop">
+    <div id="desktop" class="container-fluid animate desktop">
       <section class="videoSectionFull">
         <div class="row">
           <div class="col-sm-12 noMargPadd">
@@ -80,7 +80,7 @@
         <p id="eleventhWord">IdeaPad 5i Pro (16”, Gen 7)</p>
       </section>
     </div>
-    <div class="container-fluid mobile">
+    <div id="mobile" class="container-fluid mobile">
       <section class="section1Mob">
         <div class="row">
           <div class="col-sm-12 noMargPadd">
@@ -300,7 +300,7 @@
 
     <script>
       if (/Mobi/.test(navigator.userAgent)) {
-        $(".desktop").remove();
+        $("#desktop").remove();
         document.write(
           "<scr" +
             'ipt type="text/javascript" src="indexMob1.js"></scr' +
@@ -317,7 +317,7 @@
             "ipt>"
         );
       } else {
-        $(".mobile").remove();
+        $("#mobile").remove();
         document.write(
           "<scr" + 'ipt type="text/javascript" src="index.js"></scr' + "ipt>"
         );
