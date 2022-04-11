@@ -95,7 +95,7 @@ const tl3 = gsap
       scrub: 1,
       start: "top top",
       // end: "bottom center",
-      // markers: "true",
+      markers: "true",
       pin: true,
       // pinType: "fixed",
       pinnedContainer: ".animate3",
@@ -454,14 +454,14 @@ for (let i = 0; i < frameCount3; i++) {
   console.log(img.src);
 }
 
-tl3.to(laptops3, {
+tl.to(laptops3, {
   frame: frameCount3 - 1,
   snap: "frame",
   ease: "none",
-  scrollTrigger: {
-    trigger: ".animate3",
-    scrub: 0.5,
-  },
+  // scrollTrigger: {
+  //   trigger: ".animate",
+  //   scrub: 0.5,
+  // },
   onUpdate: render3, // use animation onUpdate instead of scrollTrigger's onUpdate
 });
 
