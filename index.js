@@ -26,7 +26,7 @@ const tl = gsap
     ease: "none",
     yPercent: 5,
     // x:200
-    duration: 1
+    duration: 1,
   })
   .to(".videoSectionFull", {
     scale: 0.6,
@@ -41,17 +41,29 @@ const tl = gsap
     xPercent: 5,
     // x: () => window.innerWidth - 0,
     opacity: 1,
-    duration: 5
+    duration: 5,
   })
-  .to("#secondWord", 1, { ease: "slow", y: -750, xPercent: 5, opacity: 1, duration: 1 })
-  .to("#thirdWord", 2, { ease: "slow", y: -750, xPercent: 5, opacity: 1, duration: 1 })
+  .to("#secondWord", 1, {
+    ease: "slow",
+    y: -750,
+    xPercent: 5,
+    opacity: 1,
+    duration: 1,
+  })
+  .to("#thirdWord", 2, {
+    ease: "slow",
+    y: -750,
+    xPercent: 5,
+    opacity: 1,
+    duration: 1,
+  })
   .to("#firstWord, #secondWord, #thirdWord", 1, { ease: "slow", opacity: 0 })
   // .to("#fourthWord", 0, { ease: "slow", y: -1050, opacity: 1 })
   .to("#animation1", 1, {
     duration: 20,
     ease: "slow(0.2, 0.2, false)",
     xPercent: -500,
-  })
+  });
 
 const tl2 = gsap
   .timeline({
@@ -86,7 +98,7 @@ const tl2 = gsap
     opacity: 1,
   })
   .to("#sixthWord", 1, { ease: "slow", y: 120, xPercent: 70, opacity: 1 })
-  .to("#seventhWord", 1, { ease: "slow", y: 120, xPercent: 70, opacity: 1 })
+  .to("#seventhWord", 1, { ease: "slow", y: 120, xPercent: 70, opacity: 1 });
 
 const tl3 = gsap
   .timeline({
@@ -114,19 +126,19 @@ const tl3 = gsap
     ease: "power1",
     xPercent: 0,
   })
-  .to("#ninthWord", 1, { ease: "slow",y: 120, xPercent: 10, opacity: 1 })
+  .to("#ninthWord", 1, { ease: "slow", y: 120, xPercent: 10, opacity: 1 })
   .to("#tenthWord", 1, { ease: "slow", y: 120, xPercent: 10, opacity: 1 })
   .to("#eleventhWord", 1, {
     ease: "slow",
     y: 120,
     xPercent: 10,
     opacity: 1,
-  })
-  .to("#animation3", 1, {
-    duration: 1,
-    ease: "power1",
-    xPercent: -500,
-  })
+  });
+// .to("#animation3", 1, {
+//   duration: 1,
+//   ease: "power1",
+//   xPercent: -500,
+// })
 
 // //  Make Video Full Large
 // // .set(".videoPlay",{
@@ -423,7 +435,7 @@ tl.to(laptops2, {
   onUpdate: render2, // use animation onUpdate instead of scrollTrigger's onUpdate
 });
 
-images2[0].onload = render;
+images2[0].onload = render2;
 
 function render2() {
   context2.clearRect(0, 0, canvas2.width, canvas2.height);
@@ -465,9 +477,10 @@ tl3.to(laptops3, {
   onUpdate: render3, // use animation onUpdate instead of scrollTrigger's onUpdate
 });
 
+images3[0].onload = render3;
+
 function render3() {
   context3.clearRect(0, 0, canvas3.width, canvas3.height);
   context3.drawImage(images3[laptops3.frame], 0, 0);
   // console.clear();
 }
-
