@@ -114,7 +114,7 @@ const tl3 = gsap
       // preventOverlaps: true,
       // refreshPriority: 1,
       // endTrigger: ".done",
-      end: "+=400%",
+      end: "+=300%",
     },
   })
   .set("#animation3", { xPercent: 350 })
@@ -459,7 +459,7 @@ const laptops3 = {
   frame: 0,
 };
 
-for (let i = 0; i < frameCount3; i++) {
+for (let i = 40; i < frameCount3; i++) {
   const img = new Image();
   img.src = currentFrame3(i);
   images3.push(img);
@@ -470,10 +470,10 @@ tl.to(laptops3, {
   frame: frameCount3 - 1,
   snap: "frame",
   ease: "none",
-  // scrollTrigger: {
-  //   trigger: ".animate",
-  //   scrub: 0.5,
-  // },
+  scrollTrigger: {
+    trigger: ".animate",
+    scrub: 0.5,
+  },
   onUpdate: render3, // use animation onUpdate instead of scrollTrigger's onUpdate
 });
 

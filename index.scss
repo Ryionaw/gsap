@@ -26,6 +26,7 @@ p {
 
 .container-fluid {
   padding: 0;
+  padding-top: 50vh;
 }
 
 .animate {
@@ -94,14 +95,13 @@ p {
 
 #animation3 {
   position: fixed;
-  left: 21%;
+  left: 40%;
   top: 6%;
   // transform: translate(-50%, -50%);
   // transform: scale(2.5);
   width: 700px;
   height: 700px;
-  background: #000;
-}
+  }
 
 .section2 {
   height: 0;
