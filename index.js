@@ -7,15 +7,15 @@ const tl = gsap
       trigger: ".animate",
       scrub: 10,
       start: "top top",
+      end: "+=500%",
       // end: "bottom center",
-      markers: "true",
+      // markers: "true",
       pin: true,
-      // pinType: "fixed",
+      pinType: "fixed",
       pinnedContainer: ".animate",
       preventOverlaps: true,
       refreshPriority: 1,
       // endTrigger: ".done",
-      end: "+=400%",
     },
   })
   //  Make Video Full Large
@@ -31,7 +31,7 @@ const tl = gsap
   .set("#firstWord", { opacity: 0 })
   .set("#secondWord", { opacity: 0 })
   .set("#thirdWord", { opacity: 0 })
-  .set("#fourthWord", { opacity: 0 })
+  // .set("#fourthWord", { opacity: 0 })
   .set("#fifthWord", { opacity: 0 })
   .set("#sixthWord", { opacity: 0 })
   .set("#seventhWord", { opacity: 0 })
@@ -48,14 +48,6 @@ const tl = gsap
     transformOrigin: "center top",
   })
 
-  // SET TEXT TO COME
-  .to("#firstWord", 0, {
-    ease: "slow",
-    y: -750,
-    xPercent: 5,
-    // x: () => window.innerWidth - 0,
-    opacity: 1,
-  })
   // SET LAPTOP TO RIGHT AFTER CENTER
   .to("#animation1", { opacity: 1 })
   .to(".videoSectionFull", {
@@ -64,13 +56,19 @@ const tl = gsap
     x: 200,
     transformOrigin: "center top",
   })
-  .to(".videoPlay", { opacity: 0 })
+  // SET TEXT TO COME
+  .to("#firstWord", 0, {
+    ease: "slow",
+    y: -750,
+    xPercent: 5,
+    // x: () => window.innerWidth - 0,
+    opacity: 1,
+  })
   .to("#secondWord", 1, { ease: "slow", y: -750, xPercent: 5, opacity: 1 })
   .to("#thirdWord", 2, { ease: "slow", y: -750, xPercent: 5, opacity: 1 })
 
   // FADE AWAY MOMENT
   .to("#firstWord", 1, { ease: "slow", opacity: 0 })
-  .to("#fourthWord", 0, { ease: "slow", y: -1050, opacity: 1 })
   .to("#animation1", 1, {
     duration: 20,
     ease: "slow(0.2, 0.2, false)",
@@ -78,31 +76,32 @@ const tl = gsap
   })
   .to("#secondWord", 1, { ease: "power1", opacity: 0 })
   .to("#thirdWord", 1, { ease: "power1", opacity: 0 })
+  .to(".videoPlay", { opacity: 0 })
+  // .to("#fourthWord", 2, { ease: "slow", y: -1025, opacity: 1 })
+  .to("#fourthWord", 3, { ease: "slow", opacity: 0 })
   .to("#animation2", 1, {
-    duration: 10,
     ease: "power1",
     xPercent: -90,
   })
-  .to("#fourthWord", 1, { ease: "power1", opacity: 0 })
-  .to("#fifthWord", 1, {
+  .to("#fifthWord", 2, {
     ease: "slow",
     y: -1050,
     xPercent: 70,
     opacity: 1,
   })
-  .to("#sixthWord", 1, { ease: "slow", y: -1050, xPercent: 70, opacity: 1 })
+  .to("#sixthWord", 2, { ease: "slow", y: -1050, xPercent: 70, opacity: 1 })
   .to("#seventhWord", 1, { ease: "slow", y: -1000, xPercent: 70, opacity: 1 })
-  .to("#animation2", 1, { ease: "power1", xPercent: 500 })
-  .to("#fifthWord", 1, { ease: "power1", opacity: 0 })
-  .to("#eightWord", 1, { ease: "power1", y: -1250, opacity: 1 })
-  .to("#sixthWord", 1, { ease: "power1", opacity: 0 })
+  .to("#animation2", 1, { duration: 2, ease: "power1", xPercent: 500 })
+  .to("#fifthWord", 1, { ease: "slow", opacity: 0 })
+  // .to("#eightWord", 1, { ease: "slow", y: -1250, opacity: 1 })
+  .to("#sixthWord", 1, { ease: "slow", opacity: 0 })
+  .to("#eightWord", 1, { ease: "slow", opacity: 0 })
+  .to("#seventhWord", 1, { ease: "slow", opacity: 0 })
   .to("#animation3", 1, {
     duration: 1,
-    ease: "power1",
+    ease: "slow",
     xPercent: 0,
   })
-  .to("#seventhWord", 1, { ease: "power1", opacity: 0 })
-  .to("#eightWord", 1, { ease: "power1", opacity: 0 })
   .to("#ninthWord", 1, { ease: "slow", y: -1450, xPercent: 10, opacity: 1 })
   .to("#tenthWord", 1, { ease: "slow", y: -1450, xPercent: 10, opacity: 1 })
   .to("#eleventhWord", 1, {
@@ -113,12 +112,12 @@ const tl = gsap
   })
   .to("#animation3", 1, {
     duration: 1,
-    ease: "power1",
+    ease: "slow",
     xPercent: -500,
   })
-  .to("#ninthWord", 1, { ease: "power1", opacity: 0 })
-  .to("#tenthWord", 1, { ease: "power1", opacity: 0 })
-  .to("#eleventhWord", 1, { ease: "power1", opacity: 0 });
+  .to("#ninthWord", 1, { ease: "slow", opacity: 0 })
+  .to("#tenthWord", 1, { ease: "slow", opacity: 0 })
+  .to("#eleventhWord", 1, { ease: "slow", opacity: 0 });
 
 // LOAD CANVAS ROTATION 1
 const canvas = document.getElementById("animation1");
@@ -142,9 +141,9 @@ const laptops = {
 
 for (let i = -35; i < frameCount; i++) {
   // if (i >= 0) {
-  const img = new Image();
-  img.src = currentFrame(i);
-  images.push(img);
+  const img1 = new Image();
+  img1.src = currentFrame(i);
+  images.push(img1);
   // }
   // console.log(img.src);
 }
@@ -177,7 +176,7 @@ const context2 = canvas2.getContext("2d");
 canvas2.width = 1440;
 canvas2.height = 1440;
 
-const frameCount2 = 47;
+const frameCount2 = 40;
 // const currentFrame = (index) =>
 //   `https://laravel3.isysedge.com/gsap_try/assets/images/${(
 //     index + 1
@@ -190,13 +189,13 @@ const laptops2 = {
   frame: 0,
 };
 
-for (let i = 0; i < frameCount2; i++) {
-  const img = new Image();
-  if (i >= 0) {
-    img.src = currentFrame2(i);
-    images2.push(img);
-  }
-  // console.log(img.src);
+for (let i = -14; i < frameCount2; i++) {
+  const img2 = new Image();
+  // if (i >= 0) {
+  img2.src = currentFrame2(i);
+  images2.push(img2);
+  // }
+  console.log(img2.src);
 }
 
 tl.to(laptops2, {
@@ -210,7 +209,7 @@ tl.to(laptops2, {
   onUpdate: render2, // use animation onUpdate instead of scrollTrigger's onUpdate
 });
 
-images2[0].onload = render;
+images2[0].onload = render2;
 
 function render2() {
   context2.clearRect(0, 0, canvas2.width, canvas2.height);
@@ -227,7 +226,7 @@ const context3 = canvas3.getContext("2d");
 canvas3.width = 1440;
 canvas3.height = 1440;
 
-const frameCount3 = 77;
+const frameCount3 = 76;
 const currentFrame3 = (index) =>
   `assets/images/5ipro/${(index + 1).toString()}.png`;
 
@@ -237,12 +236,12 @@ const laptops3 = {
 };
 
 for (let i = 0; i < frameCount3; i++) {
-  const img = new Image();
-  if (i >= 0) {
-    img.src = currentFrame3(i);
-    images3.push(img);
-  }
-  // console.log(img.src);
+  const img3 = new Image();
+  // if (i >= 0) {
+  img3.src = currentFrame3(i);
+  images3.push(img3);
+  // }
+  // console.log(img3.src);
 }
 
 tl.to(laptops3, {
@@ -256,7 +255,7 @@ tl.to(laptops3, {
   onUpdate: render3, // use animation onUpdate instead of scrollTrigger's onUpdate
 });
 
-images3[0].onload = render;
+images3[0].onload = render3;
 
 function render3() {
   context3.clearRect(0, 0, canvas3.width, canvas3.height);

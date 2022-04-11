@@ -6,8 +6,8 @@ const tl3 = gsap
       trigger: ".section3Mob",
       scrub: 5,
       start: "top top",
-      end: "+=400%",
-      markers: "true",
+      end: "+=550%",
+      // markers: "true",
       pin: true,
       pinType: "fixed",
       pinnedContainer: ".section3Mob",
@@ -28,14 +28,14 @@ const tl3 = gsap
     y: "50vh",
   })
   // SET LAPTOP TO RIGHT AFTER CENTER
-  .to("#animation3Mob", { opacity: 1 })
-  .to("#tenthWordMob", 0, { ease: "power1", y: "50vh", opacity: 1 })
-  .to("#eleventhWordMob", 0, { ease: "power1", y: "50vh", opacity: 1 })
+  .to("#animation3Mob", 3, { opacity: 1 })
+  .to("#tenthWordMob", 1, { ease: "power1", y: "50vh", opacity: 1 })
+  .to("#eleventhWordMob", 1, { ease: "power1", y: "50vh", opacity: 1 })
 
   // FADE AWAY MOMENT
-  .to("#ninthWordMob", 2, { ease: "power1", opacity: 0 })
-  .to("#tenthWordMob", 2, { ease: "power1", opacity: 0 })
-  .to("#eleventhWordMob", 2, { ease: "power1", opacity: 0 })
+  // .to("#ninthWordMob", 1, { ease: "power1", opacity: 0 })
+  // .to("#tenthWordMob", 1, { ease: "power1", opacity: 0 })
+  // .to("#eleventhWordMob", 1, { ease: "power1", opacity: 0 })
   .to("#animation3Mob", 1, {
     duration: 4,
     ease: "slow(0.2, 0.2, false)",
@@ -49,7 +49,7 @@ const context3 = canvas3.getContext("2d");
 canvas3.width = 1440;
 canvas3.height = 1440;
 
-const frameCount3 = 77;
+const frameCount3 = 75;
 const currentFrame3 = (index) =>
   `assets/images/5ipro/${(index + 1).toString()}.png`;
 
@@ -78,7 +78,7 @@ tl3.to(laptops3, {
   onUpdate: render3, // use animation onUpdate instead of scrollTrigger's onUpdate
 });
 
-images3[0].onload = render;
+images3[0].onload = render3;
 
 function render3() {
   context3.clearRect(0, 0, canvas3.width, canvas3.height);
