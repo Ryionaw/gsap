@@ -39,32 +39,33 @@ p {
   z-index: 99;
 }
 
-.laptop-wrapper-container {
-  position: absolute;
-  right: 0;
-}
-
 .laptop-wrapper {
   position: relative;
+  padding-bottom: 67.5%;
   height: 0;
-  width: 500px;
-  height: 500px;
 }
 .laptop-wrapper video {
   box-sizing: border-box;
+  box-sizing: border-box;
+  background-size: contain;
+  padding: 7% 1% 27% 0%;
   position: absolute;
-  width: 378px;
-  height: 388px;
-  top: 134px;
-  right: 174px;
+  top: -10%;
+  left: 0;
+  width: 100%;
+  height: 100%;
   z-index: 20;
 }
-.laptop-wrapper #animation1 {
-  position: absolute;
-  z-index: 10;
-  right: -74px;
-  height: 800px;
+
+#animation1 {
+  position: fixed;
+  left: 25%;
+  top: -2%;
+  transform: translate(-50%, -50%);
+  transform: scale(2.5);
   width: 800px;
+  height: 800px;
+  z-index: 10;
 }
 
 #animation2 {
@@ -95,9 +96,6 @@ p {
 }
 .section2 p {
   font-family: "Gotham-Medium";
-}
-.section2 .desc-word {
-  opacity: 0;
 }
 .section2 #fourthWord {
   text-align: center;
