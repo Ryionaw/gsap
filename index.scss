@@ -26,14 +26,12 @@ p {
 
 .container-fluid {
   padding: 0;
-  padding-top: 50vh;
 }
 
 .animate {
   position: relative;
 
   .videoSectionFull {
-
     // background: black;
     img {
       width: 100%;
@@ -68,8 +66,7 @@ p {
   }
 }
 
-.animate2{
-
+.animate2 {
 }
 
 #animation1 {
@@ -101,7 +98,7 @@ p {
   // transform: scale(2.5);
   width: 700px;
   height: 700px;
-  }
+}
 
 .section2 {
   height: 0;
@@ -126,6 +123,7 @@ p {
 }
 
 .bottomContent {
+  padding-top: 70vh;
   .section_laptop_slider {
     padding: 0px 0 40px 0;
 
@@ -141,7 +139,8 @@ p {
       margin-bottom: 40px;
     }
 
-    .ls_wrapper {}
+    .ls_wrapper {
+    }
 
     .ls_box {
       padding: 0 15px;
@@ -283,11 +282,13 @@ p {
         .guide_top {
           padding-left: 10px;
           margin-bottom: 20px;
-          background: url("assets/images/arrow_right.png") no-repeat right center / 10px;
+          background: url("assets/images/arrow_right.png") no-repeat right
+            center / 10px;
           cursor: pointer;
 
           &.active {
-            background: url("assets/images/arrow_bottom.png") no-repeat right center / 10px;
+            background: url("assets/images/arrow_bottom.png") no-repeat right
+              center / 10px;
           }
         }
 
@@ -303,15 +304,28 @@ p {
   }
 }
 
+@media only screen and (min-width: 1440px) {
+  .laptop-wrapper {
+    video {
+      padding: 9% 1% 28% 0%;
+    }
+  }
+}
+
 @media only screen and (min-width: 1920px) {
-  canvas {
-    position: fixed;
-    left: 31%;
-    top: 22%;
-    transform: translate(-50%, -50%);
-    transform: scale(3.8);
-    width: 700px;
-    height: 700px;
+  // canvas {
+  //   position: fixed;
+  //   left: 31%;
+  //   top: 22%;
+  //   transform: translate(-50%, -50%);
+  //   transform: scale(3.8);
+  //   width: 700px;
+  //   height: 700px;
+  // }
+  .laptop-wrapper {
+    video {
+      padding: 15% 1% 30% 0%;
+    }
   }
 }
 
