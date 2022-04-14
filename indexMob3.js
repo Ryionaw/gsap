@@ -4,10 +4,10 @@ const tl3 = gsap
   .timeline({
     scrollTrigger: {
       trigger: ".section3Mob",
-      scrub: 5,
+      scrub: 1,
       start: "top top",
       end: "+=400%",
-      markers: "true",
+      // markers: "true",
       pin: true,
       pinType: "fixed",
       pinnedContainer: ".section3Mob",
@@ -49,9 +49,13 @@ const context3 = canvas3.getContext("2d");
 canvas3.width = 1440;
 canvas3.height = 1440;
 
-const frameCount3 = 77;
+const frameCount3 = 62;
 const currentFrame3 = (index) =>
-  `assets/images/5ipro/${(index + 1).toString()}.png`;
+  `https://legion.lenovo.com/xbox/assets/images/5ipro/${(
+    index + 1
+  ).toString()}.png`;
+// const currentFrame3 = (index) =>
+//   `assets/images/5ipro/${(index + 1).toString()}.png`;
 
 const images3 = [];
 const laptops3 = {
@@ -78,7 +82,7 @@ tl3.to(laptops3, {
   onUpdate: render3, // use animation onUpdate instead of scrollTrigger's onUpdate
 });
 
-images3[0].onload = render;
+images3[0].onload = render3;
 
 function render3() {
   context3.clearRect(0, 0, canvas3.width, canvas3.height);

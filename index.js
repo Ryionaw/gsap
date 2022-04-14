@@ -5,7 +5,7 @@ const tl = gsap
   .timeline({
     scrollTrigger: {
       trigger: ".animate1",
-      scrub: 1,
+      scrub: 0.15,
       start: "top top",
       end: "bottom center",
       // markers: "true",
@@ -15,14 +15,14 @@ const tl = gsap
       // preventOverlaps: true,
       // refreshPriority: 1,
       // endTrigger: ".done",
-      // end: "+=400%",
+      end: "+=400%",
     },
   })
   .set("#firstWord", { opacity: 0, y: 0 })
   .set("#secondWord", { opacity: 0 })
   .set("#thirdWord", { opacity: 0 })
   .from(".videoSectionFull", {
-    scale: 1.8,
+    scale: 2.9,
     ease: "none",
     yPercent: 5,
     // x:200
@@ -37,7 +37,7 @@ const tl = gsap
   })
   .to("#firstWord", 0, {
     ease: "slow",
-    y: -750,
+    yPercent: -1400,
     xPercent: 5,
     // x: () => window.innerWidth - 0,
     opacity: 1,
@@ -45,14 +45,15 @@ const tl = gsap
   })
   .to("#secondWord", 1, {
     ease: "slow",
-    y: -750,
+    yPercent: -900,
     xPercent: 5,
     opacity: 1,
     duration: 1,
   })
   .to("#thirdWord", 2, {
     ease: "slow",
-    y: -750,
+    // y: -750,
+    yPercent: -2700,
     xPercent: 5,
     opacity: 1,
     duration: 1,
@@ -69,7 +70,7 @@ const tl2 = gsap
   .timeline({
     scrollTrigger: {
       trigger: ".animate2",
-      scrub: 1,
+      scrub: 0.15,
       start: "top top",
       // end: "bottom center",
       // markers: "true",
@@ -82,10 +83,22 @@ const tl2 = gsap
       end: "+=400%",
     },
   })
-  .set("#animation2", { xPercent: -350 })
-  .set("#fifthWord", { opacity: 0, y: 1250 })
-  .set("#sixthWord", { opacity: 0, y: 1250 })
-  .set("#seventhWord", { opacity: 0, y: 500 })
+  .set("#animation2", { xPercent: -450 })
+  .set("#fifthWord", {
+    opacity: 0,
+    // y: 1250,
+    yPercent: -30,
+  })
+  .set("#sixthWord", {
+    opacity: 0,
+    // y: 1250,
+    yPercent: -30,
+  })
+  .set("#seventhWord", {
+    opacity: 0,
+    //  y: 500 ,
+    yPercent: -30,
+  })
   .to("#animation2", 1, {
     duration: 10,
     ease: "power1",
@@ -93,28 +106,28 @@ const tl2 = gsap
   })
   .to("#fifthWord", 1, {
     ease: "slow",
-    y: 100,
-    xPercent: 70,
+    y: 200,
+    xPercent: 60,
     opacity: 1,
   })
-  .to("#sixthWord", 1, { ease: "slow", y: 120, xPercent: 70, opacity: 1 })
-  .to("#seventhWord", 1, { ease: "slow", y: 120, xPercent: 70, opacity: 1 });
+  .to("#sixthWord", 1, { ease: "slow", y: 190, xPercent: 60, opacity: 1 })
+  .to("#seventhWord", 1, { ease: "slow", y: 190, xPercent: 60, opacity: 1 });
 
 const tl3 = gsap
   .timeline({
     scrollTrigger: {
       trigger: ".animate3",
-      scrub: 1,
+      scrub: 0.15,
       start: "top top",
       // end: "bottom center",
-      markers: "true",
+      // markers: "true",
       pin: true,
       // pinType: "fixed",
       pinnedContainer: ".animate3",
       // preventOverlaps: true,
       // refreshPriority: 1,
       // endTrigger: ".done",
-      end: "+=300%",
+      end: "+=900%",
     },
   })
   .set("#animation3", { xPercent: 350 })
@@ -126,11 +139,21 @@ const tl3 = gsap
     ease: "power1",
     xPercent: 0,
   })
-  .to("#ninthWord", 1, { ease: "slow", y: 120, xPercent: 10, opacity: 1 })
-  .to("#tenthWord", 1, { ease: "slow", y: 120, xPercent: 10, opacity: 1 })
+  .to("#ninthWord", 1, {
+    ease: "slow",
+    yPercent: -1100,
+    xPercent: 10,
+    opacity: 1,
+  })
+  .to("#tenthWord", 1, {
+    ease: "slow",
+    yPercent: -1450,
+    xPercent: 10,
+    opacity: 1,
+  })
   .to("#eleventhWord", 1, {
     ease: "slow",
-    y: 120,
+    yPercent: -1100,
     xPercent: 10,
     opacity: 1,
   });
@@ -143,12 +166,12 @@ canvas2.width = 1440;
 canvas2.height = 1440;
 
 const frameCount2 = 47;
-// const currentFrame = (index) =>
-//   `https://laravel3.isysedge.com/gsap_try/assets/images/${(
-//     index + 1
-//   ).toString()}.png`;
 const currentFrame2 = (index) =>
-  `assets/images/yoga/(${(index + 1).toString().padStart(1, 0)}).png`;
+  `https://legion.lenovo.com/xbox/assets/images/yoga/(${(
+    index + 1
+  ).toString()}).png`;
+// const currentFrame2 = (index) =>
+//   `assets/images/yoga/(${(index + 1).toString().padStart(1, 0)}).png`;
 
 const images2 = [];
 const laptops2 = {
@@ -164,13 +187,13 @@ for (let i = 0; i < frameCount2; i++) {
   // console.log(img.src);
 }
 
-tl.to(laptops2, {
+tl2.to(laptops2, {
   frame: frameCount2 - 1,
   snap: "frame",
   ease: "none",
   scrollTrigger: {
     trigger: ".animate",
-    scrub: 0.5,
+    scrub: 1,
   },
   onUpdate: render2, // use animation onUpdate instead of scrollTrigger's onUpdate
 });
@@ -190,9 +213,13 @@ const context3 = canvas3.getContext("2d");
 canvas3.width = 1440;
 canvas3.height = 1440;
 
-const frameCount3 = 77;
+const frameCount3 = 63;
 const currentFrame3 = (index) =>
-  `assets/images/5ipro/${(index + 1).toString()}.png`;
+  `https://legion.lenovo.com/xbox/assets/images/5ipro/${(
+    index + 1
+  ).toString()}.png`;
+// const currentFrame3 = (index) =>
+//   `assets/images/5ipro/${(index + 1).toString()}.png`;
 
 const images3 = [];
 const laptops3 = {
@@ -206,13 +233,13 @@ for (let i = 10; i < frameCount3; i++) {
   console.log(img.src);
 }
 
-tl.to(laptops3, {
+tl3.to(laptops3, {
   frame: frameCount3 - 1,
   snap: "frame",
   ease: "none",
   scrollTrigger: {
     trigger: ".animate",
-    scrub: 0.5,
+    scrub: 1,
   },
   onUpdate: render3, // use animation onUpdate instead of scrollTrigger's onUpdate
 });

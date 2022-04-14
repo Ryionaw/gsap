@@ -4,10 +4,10 @@ const tl = gsap
   .timeline({
     scrollTrigger: {
       trigger: ".section1Mob",
-      scrub: 5,
+      scrub: 1,
       start: "top top",
       end: "+=450%",
-      markers: "true",
+      // markers: "true",
       pin: true,
       pinType: "fixed",
       pinnedContainer: ".section1Mob",
@@ -29,9 +29,9 @@ const tl = gsap
   })
 
   .to(".videoPlay", {
-    scale: 0.6,
+    scale: 0.8,
     ease: "slow",
-    yPercent: 20,
+    yPercent: 5,
     transformOrigin: "center top",
   })
 
@@ -39,9 +39,6 @@ const tl = gsap
     duration: 2,
     ease: "slow(0.5, 0.5, false)",
     yPercent: 0,
-  })
-  .to(".videoPlay", 1, {
-    opacity: 0,
   })
 
   // SET TEXT TO COME
@@ -75,12 +72,12 @@ canvas.width = 1440;
 canvas.height = 1440;
 
 const frameCount = 52;
-// const currentFrame = (index) =>
-//   `https://laravel3.isysedge.com/gsap_try/assets/images/${(
-//     index + 1
-//   ).toString()}.png`;
 const currentFrame = (index) =>
-  `assets/images/5i/${(index + 1).toString()}.png`;
+  `https://legion.lenovo.com/xbox/assets/images/5i/${(
+    index + 1
+  ).toString()}.png`;
+// const currentFrame = (index) =>
+//   `assets/images/5i/${(index + 1).toString()}.png`;
 
 const images = [];
 const laptops = {

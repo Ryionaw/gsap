@@ -54,7 +54,8 @@ p {
     box-sizing: border-box;
     box-sizing: border-box;
     background-size: contain;
-    background: url("assets/images/origin.png") center center no-repeat;
+    background: url("https://legion.lenovo.com/xbox/assets/images/origin.png")
+      center center no-repeat;
 
     padding: 7% 1% 27% 0%;
     position: absolute;
@@ -232,7 +233,8 @@ p {
   }
 
   .section_guide {
-    background: url("assets/images/bg_cover.jpg") no-repeat center / cover;
+    background: url("https://legion.lenovo.com/xbox/assets/images/bg_cover.jpg")
+      no-repeat center / cover;
     padding: 40px 0;
 
     .container {
@@ -279,13 +281,13 @@ p {
         .guide_top {
           padding-left: 10px;
           margin-bottom: 20px;
-          background: url("assets/images/arrow_right.png") no-repeat right
-            center / 10px;
+          background: url("https://legion.lenovo.com/xbox/assets/images/arrow_right.png")
+            no-repeat right center / 10px;
           cursor: pointer;
 
           &.active {
-            background: url("assets/images/arrow_bottom.png") no-repeat right
-              center / 10px;
+            background: url("https://legion.lenovo.com/xbox/assets/images/arrow_bottom.png")
+              no-repeat right center / 10px;
           }
         }
 
@@ -430,7 +432,8 @@ p {
 
     .laptop-wrapper video {
       box-sizing: border-box;
-      background: url("assets/images/origin.png") center center no-repeat;
+      background: url("https://legion.lenovo.com/xbox/assets/images/origin.png")
+        center center no-repeat;
       background-size: contain;
       padding: 7% 1% 27% 0%;
       position: absolute;

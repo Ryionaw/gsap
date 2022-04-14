@@ -4,10 +4,10 @@ const tl2 = gsap
   .timeline({
     scrollTrigger: {
       trigger: ".section2Mob",
-      scrub: 5,
+      scrub: 1,
       start: "top top",
       end: "+=340%",
-      markers: "true",
+      // markers: "true",
       pin: true,
       pinType: "fixed",
       pinnedContainer: ".section2Mob",
@@ -52,13 +52,13 @@ const context2 = canvas2.getContext("2d");
 canvas2.width = 1440;
 canvas2.height = 1440;
 
-const frameCount2 = 47;
-// const currentFrame = (index) =>
-//   `https://laravel3.isysedge.com/gsap_try/assets/images/${(
-//     index + 1
-//   ).toString()}.png`;
+const frameCount2 = 40;
 const currentFrame2 = (index) =>
-  `assets/images/yoga/${(index + 1).toString()}.png`;
+  `https://legion.lenovo.com/xbox/assets/images/yoga/(${(
+    index + 1
+  ).toString()}).png`;
+// const currentFrame2 = (index) =>
+//   `assets/images/yoga/(${(index + 1).toString()}).png`;
 
 const images2 = [];
 const laptops2 = {
@@ -85,7 +85,7 @@ tl2.to(laptops2, {
   onUpdate: render2, // use animation onUpdate instead of scrollTrigger's onUpdate
 });
 
-images2[0].onload = render;
+images2[0].onload = render2;
 
 function render2() {
   context2.clearRect(0, 0, canvas2.width, canvas2.height);
